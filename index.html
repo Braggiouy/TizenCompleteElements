@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- include CAPH 3.1.0 default package -->
+    <link
+      href="lib/caph/3.1.0/caph.min.css"
+      rel="stylesheet"
+      type="text/stylesheet"
+    />
+
+    <!-- include jQuery file (you can use jQuery in your environment) -->
+    <script
+      src="lib/caph/3.1.0/bower_components/jquery/dist/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="lib/caph/3.1.0/bower_components/lodash/lodash.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- include the CAPH Package for jquery -->
+    <script
+      src="lib/caph/3.1.0/caph-jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- my libraries -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/code.js" text="text/javascript"></script>
+  </head>
+  <body>
+    <div class="page" id="main">
+      <div class="header">
+        <h1>Choose one element from UI</h1>
+      </div>
+      <div class="zone">
+        <div
+          focusable
+          data-focusable-initial-focus="true"
+          data-focusable-group="main"
+          class="card"
+          target="buttons"
+        >
+          <div>Buttons</div>
+        </div>
+
+        <div
+          focusable
+          data-focusable-group="main"
+          class="card"
+          target="checkboxs"
+        >
+          <div>Checkboxs</div>
+        </div>
+
+        <div
+          focusable
+          data-focusable-group="main"
+          class="card"
+          target="radioButton"
+        >
+          <div>Radio Button</div>
+        </div>
+
+        <div
+          focusable
+          data-focusable-group="main"
+          class="card"
+          target="textEntry"
+        >
+          <div>Text entry</div>
+        </div>
+
+        <div focusable data-focusable-group="main" class="card" target="dialog">
+          <div>Dialog</div>
+        </div>
+
+        <div
+          focusable
+          data-focusable-group="main"
+          class="card"
+          target="contextualMenu"
+        >
+          <div>Contextual Menu</div>
+        </div>
+
+        <div
+          focusable
+          data-focusable-group="main"
+          class="card"
+          target="dropdown"
+        >
+          <div>Dropdown</div>
+        </div>
+
+        <div focusable data-focusable-group="main" class="card" target="list">
+          <div>List</div>
+        </div>
+      </div>
+      <div class="footer">Samsung Dev Spain</div>
+    </div>
+
+    <!-- Checkboxes Screen -->
+    <div class="page" id="checkboxs">
+      <div class="header">
+        <h1>Checkboxs Screen</h1>
+      </div>
+      <div class="zone">
+        <div>
+          <div id="checkbox1">Normal Checkbox</div>
+          <div id="checkbox2">Checkbox disable</div>
+          <div id="checkbox3">Checkbox pre-selected</div>
+        </div>
+      </div>
+      <div class="footer">Samsung Dev Spain</div>
+    </div>
+
+    <!-- Dialog Screen -->
+    <div class="page" id="dialog">
+      <div class="header">
+        <h1>Dialog Screen</h1>
+      </div>
+      <div class="zone">
+        <div>
+          <div class="button" id="buttonD">Open Dialog</div>
+        </div>
+      </div>
+      <div class="footer">Samsung Dev Spain</div>
+    </div>
+
+    <!-- Contextual Menu Screen -->
+    <div class="page" id="context">
+      <div class="header">
+        <h1>Contextual Menu Screen</h1>
+      </div>
+      <div class="zone">
+        <div>
+          <div class="button" id="buttonC">Contextual Menu</div>
+          <div id="contextualMenu" style="display: none">
+            <div class="caph-context-menu-item-template">${content}</div>
+            <div class="caph-context-menu-arrow-up-template">UpArrosw</div>
+            <div class="caph-context-menu-arrow-down-template">DownArrow</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Samsung Dev Spain</div>
+    </div>
+
+    <!-- Dropdown screen -->
+    <div class="page" id="dropdown">
+      <div class="header">
+        <h1>Dropdown Screen</h1>
+      </div>
+      <div class="zone">
+        <div>
+          <div id="dropdownList">
+            <div class="caph-dropdown-list-placeholder-template">
+              <div class="textbox">
+                <div class="label">Action</div>
+              </div>
+              <div class="button">
+                <div class="label">DownArrow</div>
+              </div>
+            </div>
+            <div class="caph-dropdown-list-item-template">${content}</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Samsung Dev Spain</div>
+    </div>
+
+    <!-- Radio Buttons Screen -->
+    <div class="page" id="buttonRadio">
+      <div class="header"><h1>Radio Buttons</h1></div>
+      <div class="zone">
+        <div>
+          <div class="radioButton1">Normal Radio Button</div>
+          <div class="radioButton2">Normal Radio Button 2</div>
+          <div class="radioButton3">Preselected Radio Button</div>
+        </div>
+      </div>
+      <div class="footer">Samsung Dev Spain</div>
+    </div>
+
+    <!-- Text Entry Screen -->
+    <div class="page" id="entry">
+      <div class="header">
+        <h1>Text Entry</h1>
+      </div>
+      <div class="zone">
+        <input id="entry1" />
+        <input id="entry2" />
+      </div>
+      <div class="footer">Samsung Dev Spain</div>
+    </div>
+
+    <!-- List Screen -->
+    <div class="page" id="list">
+      <div class="header">
+        <h1>List</h1>
+      </div>
+      <div class="zone">
+        <div id="listed" style="width: 800px; height: 400px"></div>
+      </div>
+      <div class="footer">Samsung Dev Spain</div>
+    </div>
+
+    <!-- Caph Dialog Window -->
+    <div id="dialog" class="caph-dialog">
+      <div class="caph-dialog-title">Dialog</div>
+      <div class="caph-dialog-content">This is a Dialog Window</div>
+      <div class="caph-dialog-buttons" button-type="confirm"></div>
+    </div>
+
+    <!-- Template for list -->
+    <script id="template1" type="text/template">
+      <div class="itemList" focusable data-focusable-group="list" style="width:200px;height:200px"></div>
+    </script>
+  </body>
+</html>
