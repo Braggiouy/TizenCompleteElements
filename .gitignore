@@ -9,8 +9,8 @@ bin
 .DS_Store
 npm-debug.log
 .scannerwork
-
+.sign
 .eslintcache
-
+TizenCompleteElements.wgt
 .env-*
 !.env-sample
