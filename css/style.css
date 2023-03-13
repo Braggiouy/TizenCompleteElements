@@ -1,0 +1,167 @@
+/* Font definition */
+@font-face {
+  font-family: SamsungOne;
+  src: URL("../fonts/SamsungOne-400.ttf") format("truetype");
+}
+
+/* General */
+html,
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: SamsungOne;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Screen Structure */
+.page {
+  padding: 20px;
+  font-size: 30px;
+  width: 1080px;
+  height: 1040px;
+}
+
+.header {
+  height: 100px;
+}
+
+.footer {
+  height: 80px;
+  clear: both;
+}
+
+.zone {
+  height: 840px;
+}
+
+.zone > div {
+  display: inline-block;
+}
+
+/* Main screen Cards */
+.card {
+  border: 10px solid transparent;
+  width: 250px;
+  height: 250px;
+  margin-top: 25px;
+  margin-bottom: 75px;
+  margin-right: 90px;
+  margin-left: 90px;
+  float: left;
+  /* background-image: ; */
+  background-repeat: no-repeat;
+  background-size: 250px 250px;
+  background-origin: content-box;
+  transition: background 1s;
+  float: left;
+  padding: 10px;
+}
+
+.card > div {
+  margin-top: 70px;
+  margin-left: 20px;
+  margin-right: 12px;
+}
+
+.card.focused {
+  border: 10px solid #1c1cd8;
+}
+
+/* Ajuste de estilo de los componentes de CAPH */
+.caph-checkbox {
+  width: 515px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  text-align: left;
+}
+
+.caph-checkbox:before {
+  font-size: 40px;
+}
+
+.caph-checkbox.focused,
+.caph-radiobutton.focused {
+  border: 4px solid #1c1cd8;
+}
+
+.caph-dialog-button.focused,
+.caph-button.focused {
+  background-color: #1c1cd8;
+}
+
+.caph-button.selected {
+  background-color: #d1d1d1;
+}
+
+.caph-button.selected.focused {
+  background-color: #d1d1ff;
+}
+
+.caph-dialog-button {
+  border: 4px solid #411414;
+}
+
+.caph-dialog {
+  width: 50%;
+  display: none;
+}
+
+.caph-dialog .content {
+  text-align: center;
+  font-size: 40px;
+}
+
+.disabled {
+  background-color: #999;
+  color: #bbb;
+}
+
+.caph-checkbox:before,
+.caph-radiobutton::before {
+  width: 70px;
+}
+
+.caph-dialog .title {
+  font-family: SamsungOne;
+}
+
+.caph-context-menu ul {
+  margin: 20px;
+}
+
+.caph-context-menu ul li {
+  height: 20px;
+  font-size: 30px;
+}
+
+.caph-context-menu ul li.focused {
+  background-color: #1c1cd8;
+}
+
+.caph-radiobutton {
+  width: 620px;
+  text-align: left;
+  border: 4px solid #0000;
+}
+
+.caph-input {
+  border: 4px solid #0000;
+}
+
+.itemList {
+  border: 4px solid #0000;
+}
+
+.itemList.focused {
+  border: 4px solid #1c1cd8;
+}
+
+.caph-dropdown-list .list-container .textbox.focused,
+.caph-dropdown-list .placeholder.focused .textbox .label,
+.caph-dropdown-list .placeholder.focused .button .label,
+.caph-dropdown-list .placeholder.focused {
+  background-color: #1c1cd8;
+  color: white;
+}
